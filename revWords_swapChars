@@ -1,0 +1,51 @@
+import java.util.*;
+public class Main
+{
+
+	public static void reverseWords(String words) {
+		String[] word = words.split(" ");
+		String revString = "";
+		for(int i = word.length-1; i>=0; i--) {
+			revString += word[i] + " ";
+		}
+		System.out.println("Reversed String: "+ revString);
+	}
+
+	public static void revAlternateChar(String words) {
+
+		String[] word = words.split(" ");
+		String modifiedString = "";
+
+
+		for(int i = 0; i< word.length; i++) {
+
+			char[] c = word[i].toCharArray();
+
+			for(int j=0; j<c.length-1; j += 2) { //swapping alternate characters
+				char temp = c[j];
+				c[j] = c[j+1];
+				c[j+1] = temp;
+			}
+
+			String str = new String(c);
+			modifiedString += str + " ";
+
+			
+		}
+		System.out.println("Reversing alternate chars: "+ modifiedString);
+	}
+
+
+
+
+
+public static void main(String[] args) {
+	System.out.println("Hello World");
+	// **Reverse words / alternate letters** in a sentence.
+	String words = "I Java Python SQL";
+	System.out.println("Actual String: "+ words);
+	reverseWords(words);
+	revAlternateChar(words);
+
+}
+}
