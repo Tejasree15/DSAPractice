@@ -1,0 +1,31 @@
+public class Palindrome
+{
+	public static void main(String[] args) {
+		System.out.println("Hello World");
+		
+		String s1 = "mam";
+		boolean isPalindrome = true;
+		
+		int i = 0;
+		int j = s1.length()-1;
+		
+		if(j == 0){ //Empty String
+		   System.out.println("Palindrome");
+		   return;
+		}
+		
+		while(i < j){
+		    if(s1.charAt(i) != s1.charAt(j)){
+		        isPalindrome = false;
+		        break;
+		    }
+		    i++;
+		    j--;
+		}
+		if(isPalindrome ){
+		    System.out.println("Palindrome");
+		}else{
+		    System.out.println("Not Palindrome");
+		}
+	}
+}
