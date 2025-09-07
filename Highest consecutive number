@@ -1,0 +1,21 @@
+public class Main
+{
+	public static void main(String[] args) {
+		int n = 924495456; //output - 954
+		int k = 3;
+		int max = 0;
+
+		String numString = String.valueOf(n);
+		for(int i = 0; i<numString.length()-k; i++) {
+		    
+			String tempStr = numString.substring(i, i+k);
+			int newNum = Integer.parseInt(new String(tempStr));
+			
+			if(newNum > max) {
+				max = newNum;
+			}
+		}
+		System.out.println(max);
+
+	}
+}
