@@ -56,7 +56,7 @@ System.out.println("Diamond Pattern");
 			}
 			System.out.println();
 		}
-System.out.println("Pascal Triangle");
+System.out.println("Pascal Triangle with formula");
 		int n = 5;
 		for(int i=0; i<=n; i++) {
 		    
@@ -72,5 +72,21 @@ System.out.println("Pascal Triangle");
 			}
 			System.out.println();
 		}
+System.out.println("Pascal Triangle with Arrays");
+int[][] pascal = new int[n][n];
+
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j <= i; j++) {
+                // edges are always 1
+                if (j == 0 || j == i) {
+                    pascal[i][j] = 1;
+                } else {
+                    pascal[i][j] = pascal[i-1][j-1] + pascal[i-1][j];
+                }
+
+                System.out.print(pascal[i][j] + " ");
+            }
+            System.out.println();
+        }
 	}
 }
