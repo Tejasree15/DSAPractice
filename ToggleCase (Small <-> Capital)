@@ -1,0 +1,21 @@
+public class Main
+{
+	public static void main(String[] args) {
+		System.out.println("Hello World");
+		String str = "jShnUSbcjsAJJJD";
+		String AltStr = "";
+		System.out.println(str);
+		char[] cArr = str.toCharArray();
+		for(char c: cArr){
+		   if(c >= 'a' && c <= 'z'){
+		       AltStr = AltStr + (char)(c-('a'-'A'));
+		   }
+		   if(c >= 'A' && c <= 'Z'){
+		       AltStr = AltStr + (char)(c+('a'-'A'));
+		   }
+		   
+		}
+		
+		System.out.println(AltStr);
+	}
+}
